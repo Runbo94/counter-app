@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 1
+    count: 0
   };
 
   //   constructor() {
@@ -12,6 +12,7 @@ class Counter extends Component {
 
   handleIncrement = () => {
     console.log("Increment Clicked", this);
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
@@ -24,6 +25,7 @@ class Counter extends Component {
         >
           Increment
         </button>
+        <br />
       </React.Fragment>
     );
   }
